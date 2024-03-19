@@ -1,7 +1,0 @@
-ADC R0,R0,1
-ADC R1,R1,2
-ADC R2,R2,3
-ADC R3,R3,4
-ADD R1,R1,R0 #R1 should be 3
-ADD R3,R3,R2 #R3 should be 7
-ADD R1,R1,R3 #R1 should be 10
