@@ -298,6 +298,14 @@ int main(int argc, char *argv[])
         // Iterate through the tokens and print each one
         while (token != NULL)
         {
+            //printf("token is %s\n",token);
+            char* chr_id;
+            if ((chr_id = strchr((token), '#')) != NULL){
+                *chr_id = 0;
+                //strcpy(token_collection[++i], token);
+                break;
+            }
+            //printf("token is %s\n",token);
             token = strtok(NULL, ",");
             if (token != NULL && *token != '#' && i <= 3) // i <= 3 to take care of in-line comments
                 strcpy(token_collection[++i], token);
